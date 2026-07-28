@@ -1,0 +1,564 @@
+You are a senior Python software engineer with 15+ years of experience.
+
+Your task is to build a COMPLETE production-quality Student Management System using ONLY Python standard libraries (no external APIs and no databases).
+
+The project should be written as if it will be uploaded to GitHub and evaluated by software engineers for internship recruitment.
+
+=========================
+MAIN GOALS
+=========================
+
+The project must demonstrate:
+
+- Object-Oriented Programming
+- Clean Architecture
+- Modular Code
+- SOLID Principles where applicable
+- Proper Exception Handling
+- File Handling
+- JSON Storage
+- CSV Export
+- Password Hashing
+- Searching Algorithms
+- Sorting Algorithms
+- Documentation
+- Professional Folder Structure
+
+Do NOT write everything inside one file.
+
+=========================
+TECH STACK
+=========================
+
+Language:
+Python 3.12+
+
+Libraries allowed:
+
+json
+csv
+hashlib
+os
+datetime
+typing
+uuid
+random
+getpass
+pathlib
+statistics
+dataclasses
+collections
+
+Do NOT use:
+
+SQLite
+MySQL
+MongoDB
+Flask
+Django
+FastAPI
+Pandas
+NumPy
+Requests
+Any API
+Any third-party package
+
+Everything must run offline.
+
+=========================
+PROJECT STRUCTURE
+=========================
+
+StudentManagementSystem/
+
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── models/
+│      student.py
+│      attendance.py
+│      marks.py
+│      user.py
+│
+├── services/
+│      auth_service.py
+│      student_service.py
+│      attendance_service.py
+│      marks_service.py
+│      gpa_service.py
+│      export_service.py
+│      search_service.py
+│      ranking_service.py
+│
+├── storage/
+│      database.py
+│
+├── data/
+│      students.json
+│      attendance.json
+│      marks.json
+│      users.json
+│
+├── utils/
+│      validator.py
+│      helper.py
+│      constants.py
+│
+└── tests/
+
+=========================
+AUTHENTICATION
+=========================
+
+Create a login system.
+
+Admin registration
+
+Admin login
+
+Passwords must NEVER be stored as plain text.
+
+Use SHA-256 hashing.
+
+Use getpass for hidden password input.
+
+User session after login.
+
+Logout.
+
+Maximum 3 login attempts.
+
+=========================
+STUDENT MODEL
+=========================
+
+Each student should have
+
+UUID
+Roll Number
+Registration Number
+Full Name
+Age
+Gender
+Department
+Semester
+Phone
+Email
+Address
+Date of Joining
+
+=========================
+STUDENT FEATURES
+=========================
+
+Register student
+
+Update student
+
+Delete student
+
+View student profile
+
+Search student
+
+List all students
+
+Validate all inputs.
+
+Prevent duplicate roll numbers.
+
+=========================
+ATTENDANCE
+=========================
+
+Store attendance by date.
+
+Each day:
+
+Present
+Absent
+Late
+
+Calculate
+
+Attendance %
+
+Total classes
+
+Present count
+
+Absent count
+
+Late count
+
+Show attendance report.
+
+=========================
+MARKS MANAGEMENT
+=========================
+
+Subjects:
+
+Mathematics
+
+Physics
+
+Chemistry
+
+Programming
+
+English
+
+Store:
+
+Assignment marks
+
+Internal marks
+
+Practical marks
+
+Final Exam
+
+Calculate
+
+Subject total
+
+Overall percentage
+
+=========================
+GPA SYSTEM
+=========================
+
+Automatically calculate GPA.
+
+Use configurable grade boundaries.
+
+Example
+
+90+
+
+A+
+
+10
+
+80
+
+A
+
+9
+
+70
+
+B
+
+8
+
+etc.
+
+Display
+
+Grade
+
+CGPA
+
+Percentage
+
+=========================
+SEARCHING
+=========================
+
+Implement
+
+Linear Search
+
+Binary Search
+
+Allow search by
+
+Roll
+
+Name
+
+Department
+
+Semester
+
+Registration Number
+
+=========================
+SORTING
+=========================
+
+Implement
+
+Bubble Sort
+
+Merge Sort
+
+Python TimSort
+
+Allow sorting by
+
+Name
+
+CGPA
+
+Attendance
+
+Marks
+
+Department
+
+Roll
+
+=========================
+RANKING
+=========================
+
+Automatically generate
+
+Topper List
+
+Department Rank
+
+Overall Rank
+
+Class Rank
+
+Display Top 10.
+
+=========================
+EXPORT
+=========================
+
+Export
+
+Students
+
+Attendance
+
+Marks
+
+Results
+
+to CSV.
+
+Generate proper headers.
+
+=========================
+JSON DATABASE
+=========================
+
+Store everything inside JSON files.
+
+Automatically create files if missing.
+
+Implement
+
+Load
+
+Save
+
+Update
+
+Delete
+
+without corrupting data.
+
+=========================
+VALIDATION
+=========================
+
+Validate
+
+Phone
+
+Email
+
+Age
+
+Marks
+
+Semester
+
+Department
+
+Duplicate entries
+
+Empty values
+
+=========================
+MENU
+=========================
+
+Create a professional CLI.
+
+Example
+
+=========================
+STUDENT MANAGEMENT SYSTEM
+=========================
+
+1 Register Student
+2 Update Student
+3 Delete Student
+4 Search Student
+5 Attendance
+6 Marks
+7 GPA
+8 Rankings
+9 Export CSV
+10 Reports
+11 Logout
+12 Exit
+
+Make menus colorful using ANSI escape codes.
+
+=========================
+REPORTS
+=========================
+
+Generate reports
+
+Student Report
+
+Attendance Report
+
+Department Report
+
+Semester Report
+
+Top Performers
+
+Low Attendance Students
+
+Failed Students
+
+=========================
+ERROR HANDLING
+=========================
+
+Handle
+
+Missing files
+
+Invalid inputs
+
+Corrupted JSON
+
+Duplicate roll numbers
+
+Wrong password
+
+Unexpected exceptions
+
+=========================
+README
+=========================
+
+Generate a professional README including
+
+Project Overview
+
+Features
+
+Folder Structure
+
+Installation
+
+How to Run
+
+Screenshots placeholders
+
+Future Improvements
+
+License
+
+=========================
+CODE QUALITY
+=========================
+
+Every function should include
+
+Docstrings
+
+Type hints
+
+Comments only where necessary
+
+Meaningful variable names
+
+PEP8 formatting
+
+=========================
+BONUS FEATURES
+=========================
+
+Implement all of these:
+
+Student ID Card Generator (text format)
+
+Recent Activity Log
+
+Undo Last Delete
+
+Backup JSON files
+
+Restore Backup
+
+Password Change
+
+Forgot Password (security question)
+
+Dashboard Statistics
+
+Total Students
+
+Average GPA
+
+Highest GPA
+
+Lowest GPA
+
+Attendance Statistics
+
+Department-wise Statistics
+
+Semester-wise Statistics
+
+=========================
+GITHUB QUALITY
+=========================
+
+The finished project should look like a real open-source project.
+
+Avoid beginner code.
+
+Keep functions short.
+
+Separate business logic from UI.
+
+Follow clean architecture.
+
+=========================
+OUTPUT FORMAT
+=========================
+
+Do NOT generate the whole project in one response.
+
+Instead, build the project module-by-module.
+
+For every module:
+
+1. Explain what it does.
+2. Write complete code.
+3. Explain the important logic.
+4. Wait for confirmation before generating the next module.
+
+Never skip files.
+
+Never leave TODO comments.
+
+Generate production-quality code.
